@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "sistema": "Linux",
+  "modelo_ollama": "llama3.2",
+  "ollama_url": "http://localhost:11434",
+  "install_dir": "/home/user/.local/share/peralta",
+  "quarantine_dir": "/home/user/.local/share/peralta/quarantine",
+  "log_dir": "/home/user/.local/share/peralta/logs",
+  "voz_activada": true,
+  "velocidad_voz": 150,
+  "idioma_voz": "es",
+  "escaneo_web": true,
+  "escaneo_apps": true,
+  "escaneo_red": true,
+  "proteccion_tiempo_real": true,
+  "max_file_size_ia": 512000,
+  "instalado": true,
+  "fecha_instalacion": "2026-05-08 15:20:48"
+}
