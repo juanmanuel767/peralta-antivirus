@@ -83,7 +83,7 @@ DEFAULT_CONFIG = {
     "modelo_neuronal": "llama3.2",
     "motor_url": "http://localhost:11434",
     "voz_activada": True,
-    "velocidad_voz": 145,
+    "velocidad_voz": 165,
     "escaneo_web": True,
     "escaneo_apps": True,
     "escaneo_red": True,
@@ -127,13 +127,25 @@ class Voz:
             try:
                 cls._engine = pyttsx3.init()
                 cls._engine.setProperty("rate", CFG["velocidad_voz"])
-                # Buscar voz en español
+                # Buscar voz en español (Priorizar Latino)
                 voces = cls._engine.getProperty("voices")
+                v_target = None
+                
+                # Intentar primero Latinoamérica (es-419)
                 for v in voces:
-                    # Linux/Windows: helena, jorge, sabina | macOS: paulina, monica
-                    if any(x in v.id.lower() for x in ["es", "spanish", "español", "helena", "jorge", "sabina", "paulina", "monica"]):
-                        cls._engine.setProperty("voice", v.id)
+                    if "es-419" in v.id.lower():
+                        v_target = v
                         break
+                
+                # Si no, buscar cualquier español
+                if not v_target:
+                    for v in voces:
+                        if any(x in v.id.lower() for x in ["es", "spanish", "español", "helena", "jorge", "sabina", "paulina", "monica"]):
+                            v_target = v
+                            break
+                
+                if v_target:
+                    cls._engine.setProperty("voice", v_target.id)
             except Exception:
                 cls._engine = None
 
