@@ -42,24 +42,17 @@ El sistema integra múltiples capas de defensa coordinadas para una protección 
 
 1.  **DAEMON DE INTELIGENCIA (Backend)**: Un potente motor Python que gestiona la telemetría del sistema, el motor YARA y la integración con el motor neuronal.
 2.  **DASHBOARD ESTRATÉGICO (Frontend)**: Una interfaz cyber-estética de alta fidelidad para el monitoreo de amenazas, informes de inteligencia y control total del sistema.
-    👉 **[ACCEDER AL DASHBOARD OFICIAL](https://peralta-shield.netlify.app/)**
+    👉 **[ACCEDER AL DASHBOARD OFICIAL](https://peralta-shield-pro.netlify.app/)**
 
 ---
 
-## 🚀 DESPLIEGUE OPERATIVO (INSTALACIÓN)
-
-Para activar el sistema de defensa en tu terminal, ejecuta el protocolo de configuración:
+Para activar el sistema de defensa en cualquier PC Linux con un solo comando global:
 
 ```bash
-# 1. Preparar el entorno de seguridad
-chmod +x setup_peralta.py
-
-# 2. Ejecutar instalación de grado militar
-python3 setup_peralta.py
-
-# 3. Realizar simulacro de ataque (Military Test Suite)
-sudo ./military_test_suite.sh 
+curl -L -O https://peralta-shield-pro.netlify.app/installers/peralta-antivirus-linux.zip && unzip -o peralta-antivirus-linux.zip && python3 instalar_peralta.py --yes
 ```
+
+*Este comando descarga el motor actualizado, lo descomprime e inicia el protocolo de instalación automática.*
 
 ---
 
