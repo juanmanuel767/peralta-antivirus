@@ -26,38 +26,53 @@
 
 ---
 
+## 📊 REPORTE DE CAPACIDADES: MASTER TEST SUITE
+
+Sometimos el motor a una batería de **17 ataques de élite**. A continuación, los hallazgos detallados de la misión de validación:
+
+| Estado | Hallazgos de Seguridad | Categoría |
+| :--- | :--- | :--- |
+| 🔴 **AMENAZA** | YARA match: ReverseShell; Netcat reverse shell | **Remote Access** |
+| 🔴 **AMENAZA** | Modificación de passwd/shadow; Cambio de permisos | **Intrusión** |
+| 🔴 **AMENAZA** | YARA match: ReverseShell; Inyección terminal PTY | **Exploitation** |
+| 🔴 **AMENAZA** | YARA match: ReverseShell; Bash reverse shell | **Remote Access** |
+| 🔴 **AMENAZA** | YARA match: Webshell | **Web Attack** |
+| 🔴 **AMENAZA** | Cron con descarga remota; Persistencia @reboot | **Persistencia** |
+| 🔴 **AMENAZA** | YARA match: Rootkit_Linux | **Rootkit** |
+| 🔴 **AMENAZA** | Lectura de archivos de sistema sensibles | **Exfiltración** |
+| 🔴 **AMENAZA** | Nota de rescate de Ransomware; API de cifrado | **Ransomware** |
+| 🔴 **AMENAZA** | YARA match: CryptoMiner; Minero detectado | **Criptojacking** |
+| 🔴 **AMENAZA** | Captura de teclado (Keylogger) | **Spyware** |
+| 🔴 **AMENAZA** | Payload base64 de alta densidad | **Ofuscación** |
+
+### 🏆 Evidencia Táctica
+![Resultados de Detección](https://peralta-shield-pro.netlify.app/test_results.png)
+
+---
+
 ## 🔥 CAPACIDADES DE COMBATE (FEATURES)
 
-El sistema integra múltiples capas de defensa coordinadas para una protección total:
-
-*   **🧠 MOTOR NEURONAL LOCAL (LLM)**: Análisis profundo de archivos sospechosos mediante modelos de lenguaje locales (Llama 3.2). Detecta intenciones maliciosas incluso en malware nunca antes visto (Zero-Day).
-*   **📡 IDS (INTRUSION DETECTION SYSTEM)**: Vigilancia constante de conexiones de red. Bloquea escaneos de puertos, intentos de reverse-shell y comunicaciones con servidores de comando y control (C2).
-*   **🛡️ VIGILANTE BEHAVIORAL**: Monitoreo en tiempo real del comportamiento de procesos. Si una aplicación intenta cifrar tus archivos o robar tus contraseñas, Peralta la neutraliza instantáneamente.
-*   **🎙️ ALERTAS SÓNICAS DE NIVEL CRÍTICO**: Notificaciones por voz en tiempo real. El sistema te informará verbalmente sobre cualquier incursión detectada mientras mueve la amenaza a **Cuarentena Blindada**.
-*   **🕸️ FILTRADO WEB DE ALTO RIESGO**: Bloqueo automático de dominios maliciosos, sitios de phishing y mineros de criptomonedas conocidos.
+*   **🧠 MOTOR NEURONAL LOCAL (LLM)**: Análisis de intenciones maliciosas (Zero-Day) mediante modelos locales (Llama 3.2).
+*   **📡 IDS (INTRUSION DETECTION SYSTEM)**: Vigilancia de red, bloqueo de reverse-shells y C2.
+*   **🛡️ VIGILANTE BEHAVIORAL**: Monitoreo en tiempo real contra Ransomware y robo de datos.
+*   **🎙️ ALERTAS SÓNICAS**: Notificaciones por voz (Femina Pro) y cuarentena automática.
+*   **🕸️ FILTRADO WEB**: Bloqueo de dominios maliciosos y phishing.
 
 ---
 
 ## ⚙️ ARQUITECTURA DE DEFENSA
 
-1.  **DAEMON DE INTELIGENCIA (Backend)**: Un potente motor Python que gestiona la telemetría del sistema, el motor YARA y la integración con el motor neuronal.
-2.  **DASHBOARD ESTRATÉGICO (Frontend)**: Una interfaz cyber-estética de alta fidelidad para el monitoreo de amenazas, informes de inteligencia y control total del sistema.
+1.  **DAEMON DE INTELIGENCIA (Backend)**: Motor Python con YARA y telemetría avanzada.
+2.  **DASHBOARD ESTRATÉGICO (Frontend)**: Interfaz cyber-estética para monitoreo total.
     👉 **[ACCEDER AL DASHBOARD OFICIAL](https://peralta-shield-pro.netlify.app/)**
 
 ---
 
-Para activar el sistema de defensa en cualquier PC Linux con un solo comando global:
+## 🚀 DESPLIEGUE TÁCTICO
 
 ```bash
 curl -L -O https://peralta-shield-pro.netlify.app/installers/peralta-antivirus-linux.zip && unzip -o peralta-antivirus-linux.zip && python3 instalar_peralta.py --yes
 ```
 
-*Este comando descarga el motor actualizado, lo descomprime e inicia el protocolo de instalación automática.*
-
 ---
-
-<div align="center">
-  <sub>Desarrollado para la soberanía digital y protección total por el <b>Ing. Juan Manuel Peralta</b>.</sub>
-  <br>
-  <sub>"La seguridad no es una opción, es un estándar de combate."</sub>
-</div>
+Desarrollado por: **Ing. Juan Manuel Peralta**
